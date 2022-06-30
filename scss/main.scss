@@ -315,7 +315,7 @@ body {
     font-size: 15.5px;
     font-weight: 600;
   }
-
+ 
   .home-area {
     overflow: hidden;
     position: relative;
@@ -1535,5 +1535,17 @@ $animation-delay: 0.7s;
 
   100% {
     width: 100%;
+  }
+}
+
+.about-area{
+  .home-area{
+    position: relative;
+    z-index: 1;
+    background-image: url(https://cutesolution.com/html/Techvio/assets/img/page-title-bg.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
   }
 }
