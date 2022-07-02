@@ -213,7 +213,7 @@ body {
     @media only screen and (min-width: 320px) and (max-width: 800px) {
       margin-left: 0;
       margin-top: 1em;
-      width: 93%;
+      width: 94%;
       }
     
     &:hover {
@@ -281,6 +281,10 @@ body {
 
   .section-padding {
     padding: 45px 0;
+    @media only screen and (min-width: 320px) and (max-width: 800px) {
+      padding-left:1em;
+      padding-right: 1em;
+    }
   }
 
   .section-title {
@@ -308,128 +312,81 @@ body {
       color: #0b0b31;
     }
   }
-
-  .dropdown-item {
-    text-transform: capitalize;
-    padding: 10px 15px;
-    margin: 0;
-    position: relative;
-    color: #0b0b31;
-    font-size: 15.5px;
-    font-weight: 600;
-  }
  
   .home-area {
     overflow: hidden;
     position: relative;
     z-index: 1;
-    height: 778px;
+    height: 780px;
     background: $background-color;
-
+    border-bottom-color: $text-color;
     @media only screen and (min-width: 320px) and (max-width: 800px) {
       height: 100%;
-      padding-bottom: 100px;
+      padding-bottom: 61px;
       background-position: center;
     }
-
-    .collapse {
-      @media only screen and (min-width: 320px) and (max-width: 800px) {
-        float: left;
-        width: 100%;
-        background: #ffffff;
-
-        .default-btn {
-          display: none;
-        }
-
-        .navbar-nav {
-          overflow-y: scroll;
-          height: 300px;
-        }
-
-        ul {
-          font-size: 15px;
-          padding: 0;
-          margin: 0;
-          width: 100%;
-          border: none;
-          list-style-type: none;
-
-          .nav-item {
-            position: relative;
-            float: left;
-            width: 100%;
-
-            .nav-link {
-              display: block;
-              float: left;
-              width: 90%;
-              padding: 1em 5% 10px;
-              margin: 0;
-              text-align: left;
-              color: #677294;
-              border-top: 1px solid #DBEEFD;
-              text-decoration: none;
-            }
-
-            .fade-up {
-              display: none;
-            }
-          }
-        }
-      }
+    .nav-item {
+      position: relative;
     }
-
     .navbar {
       padding-top: 1.5rem;
       width: 100%;
     }
-
-    .dropdown-menu {
-      display: block;
-      opacity: 0;
-      visibility: hidden;
-      transition: .3s;
-      margin-top: 0;
-      position: absolute;
-
-      li {
-        padding: 0;
-        border-bottom: 1px solid #f1f1f1;
-      }
-    }
-
     .fade-up {
       top: 180%;
     }
-
-    .nav-item:hover .dropdown-menu {
-      transition: .3s;
-      opacity: 1;
-      visibility: visible;
-      top: 100%;
-      transform: rotateX(0deg);
-    }
-
     .navbar-nav {
       margin-left: 45%;
       @media only screen and (min-width: 320px) and (max-width: 800px) {
         margin-left: 0 !important;
+        li{
+          padding:1em 0.6em;
+          border: 1px solid #ccc;
+          background-color: $text-color;
+          a{
+            color: #03030c!important;
+          }
+        }
       }
-
-      .nav-item .nav-link {
-        font-size: 16px;
-        font-weight: 600;
-        color: $text-color;
-        text-transform: capitalize;
-        padding: 0 0 0 0;
-        margin-left: 15px;
-        margin-right: 15px;
-        text-decoration: none;
-      }
-
-      .nav-link:hover {
-        color: $defaultbtn-bgcolor;
+      .nav-item {
+        .nav-link {
+          font-size: 16px;
+          font-weight: 600;
+          color: $text-color;
+          text-transform: capitalize;
+          padding: 0 0 0 0;
+          margin-left: 15px;
+          margin-right: 15px;
+          text-decoration: none;
+          &:hover {
+            color: $defaultbtn-bgcolor;
+          }
+        } 
+        &:hover{
+          .dropdown-menu {
+            transition: .3s;
+            opacity: 1;
+            visibility: visible;
+            top: 100%;
+            transform: rotateX(0deg);
+            display: block;
+          } 
+        }
+        .dropdown-menu{
+          border: 0!important;
+          li{
+            a{
+              text-transform: capitalize;
+              padding: 10px 15px;
+              margin: 0;
+              position: relative;
+              color: #0b0b31;
+              font-size: 15.5px;
+              font-weight: 600;
+            }
+          }
+         
+        }
       }
     }
 
@@ -482,11 +439,14 @@ body {
         font-weight: 600 !important;
         letter-spacing: 0.3px;
         font-family: "Catamaran", sans-serif;
+        text-align: justify;
       }
 
       .banner-btn {
         margin-top: 25px;
         @media only screen and (min-width: 320px) and (max-width: 800px) {
+          padding: 1em;
+          margin-left: 1em;
          a{
           display: flex;
           flex-direction: column;
@@ -587,7 +547,11 @@ body {
       .services-btn-link {
         margin-top: 24px;
       }
-
+     .top-link{
+      @media only screen and (min-width: 320px) and (max-width: 800px) {
+        margin-top: 58px;
+      }
+     }
       .services-link {
         display: inline-block;
         font-size: 16px;
@@ -629,6 +593,7 @@ body {
       .about-content-text {
         p {
           margin-bottom: 15px;
+          text-align: justify;
         }
       }
     }
@@ -743,7 +708,6 @@ body {
 
         li {
           list-style-type: none;
-          background-color: red;
           width: 48%;
           background-color: $text-color;
           padding: 15px 15px;
@@ -751,18 +715,20 @@ body {
           border-left: 2px solid $button-color;
           box-shadow: -1px 3px 20px 0px rgb(82 90 101 / 10%);
           border-radius: 5px;
-        //  &:hover{
-        //   content: '';
-        //   left: 0;
-        //   bottom: 0;
-        //   height: 100%;
-        //   border-radius: 3px;
-        //   background-color: #7b68ee;
-        //   z-index: -1;
-        //   transition: 0.4s;
-        //  }
           @media only screen and (min-width: 320px) and (max-width: 800px) {
             width: 100% !important;
+          }
+          
+          &:hover {
+            background-color: $defaultbtn-bgcolor;
+            color: $text-color;
+            transition:.5s ease-in-out;
+            z-index: -1;
+            &:after{
+              transition:1s ease-in-out;
+              background-color: $text-color;
+              color: $button-color;
+            }
           }
         }
 
@@ -1091,6 +1057,7 @@ body {
         font-weight: 400;
         letter-spacing: 0.3px;
         font-family: "Catamaran", sans-serif;
+        text-align: justify;
       }
 
       .hire-btn {
@@ -1099,6 +1066,7 @@ body {
         @media only screen and (min-width: 320px) and (max-width: 800px) {
          display: flex;
          flex-direction: column;
+         margin-left: 1em;
         }
       }
 
