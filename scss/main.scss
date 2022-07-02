@@ -189,8 +189,7 @@ body {
   .container {
     max-width: 1200px;
     margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding: auto 10px;
   }
 
   p {
@@ -218,8 +217,8 @@ body {
     text-decoration: none;
     @media only screen and (min-width: 320px) and (max-width: 800px) {
       margin-left: 0;
-      margin-top: 1em;
-      width: 94%;
+      margin-top: 0;
+      width: 45%;
     }
 
     &:hover {
@@ -257,11 +256,13 @@ body {
     font-size: 15px;
     padding: 12px 40px;
     text-decoration: none;
-    margin-top: 5px;
     margin-right: 20px;
     box-shadow: 0 7px 25px rgb(123 104 238 / 25%);
     @media only screen and (min-width: 320px) and (max-width: 800px) {
+      margin-top: 0;
       margin-left: 0;
+      margin-right: 0;
+      width: 40%;
     }
 
     &:hover {
@@ -343,6 +344,7 @@ body {
     }
     .navbar-nav {
       margin-left: 45%;
+      transition: 5s ease-in-out;
       @media only screen and (min-width: 320px) and (max-width: 800px) {
         margin-left: 0 !important;
         li {
@@ -399,12 +401,14 @@ body {
         }
       }
       .dropdown {
-        padding: 1em 0.6em;
-        ul {
-          li {
-            padding: 5px 0;
-            a {
-              padding: 1em 15px;
+        @media only screen and (min-width: 320px) and (max-width: 800px) {
+          padding: 1em 0.6em;
+          ul {
+            li {
+              padding: 5px 0;
+              a {
+                padding: 1em 15px;
+              }
             }
           }
         }
@@ -436,7 +440,7 @@ body {
 
       @media only screen and (min-width: 320px) and (max-width: 800px) {
         text-align: center;
-        padding: 50px 0px 0px 0px;
+        padding: 50px 1em 0px 1em;
       }
 
       h1 {
@@ -466,8 +470,11 @@ body {
       .banner-btn {
         margin-top: 25px;
         @media only screen and (min-width: 320px) and (max-width: 800px) {
-          padding: 1em;
-          margin-left: 1em;
+          padding: 0;
+          margin-left: 0;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
           a {
             display: flex;
             flex-direction: column;
@@ -493,6 +500,10 @@ body {
       margin-bottom: 65px;
       line-height: 1.5;
 
+      @media only screen and (min-width: 320px) and (max-width: 800px) {
+        margin-bottom: 0;
+      }
+
       h6 {
         font-size: 16px;
         font-weight: 700;
@@ -516,7 +527,7 @@ body {
       position: relative;
       z-index: 1;
       display: block;
-      padding: 35px 30px;
+      padding: 35px 1.5em;
       text-align: left;
       border-radius: 3px;
       background-color: $text-color;
@@ -531,6 +542,9 @@ body {
       }
       .services-icon {
         height: 120px;
+        @media only screen and (min-width: 320px) and (max-width: 800px) {
+          height: 100px;
+        }
 
         img {
           width: 80px;
@@ -544,6 +558,9 @@ body {
 
       div:nth-child(3) {
         height: 105px;
+        @media only screen and (min-width: 320px) and (max-width: 800px) {
+          height: auto;
+        }
       }
 
       h3 {
@@ -567,6 +584,9 @@ body {
 
       .services-btn-link {
         margin-top: 24px;
+        @media only screen and (min-width: 320px) and (max-width: 800px) {
+          margin-top: 0.5em;
+        }
       }
       .top-link {
         @media only screen and (min-width: 320px) and (max-width: 800px) {
@@ -583,7 +603,7 @@ body {
         text-decoration: underline;
         font-family: "Dosis", sans-serif;
         @media only screen and (min-width: 320px) and (max-width: 800px) {
-          margin-top: 2em;
+          margin-top: 0;
         }
       }
     }
@@ -594,6 +614,11 @@ body {
     z-index: 1;
 
     .about-content {
+      padding-right: 2em;
+      @media only screen and (min-width: 320px) and (max-width: 800px) {
+        padding-right: 0 !important;
+      }
+
       h6 {
         color: $button-color;
         font-size: 16px;
@@ -661,7 +686,7 @@ body {
       text-align: center;
       margin-left: 0px;
       @media only screen and (min-width: 320px) and (max-width: 800px) {
-        margin-top: 2em;
+        margin-top: 4em;
       }
 
       .years-design {
@@ -706,6 +731,8 @@ body {
     }
 
     .overview-content {
+      padding: 3em 0;
+
       h6 {
         font-size: 16px;
         font-weight: 700 !important;
@@ -713,6 +740,9 @@ body {
         letter-spacing: 0.5px;
         text-transform: uppercase;
         font-family: "Dosis", sans-serif;
+      }
+      p {
+        text-align: justify;
       }
 
       h2 {
@@ -744,8 +774,9 @@ body {
           &:hover {
             background-color: $defaultbtn-bgcolor;
             color: $text-color;
-            transition: 0.5s ease-in-out;
-            z-index: -1;
+            transition: 0.7s ease-in-out;
+            box-shadow: -1px 3px 20px 0px rgb(82 90 101 / 10%);
+
             &:after {
               transition: 1s ease-in-out;
               background-color: $text-color;
@@ -1080,20 +1111,36 @@ body {
         letter-spacing: 0.3px;
         font-family: "Catamaran", sans-serif;
         text-align: justify;
+        padding: 1em;
       }
 
       .hire-btn {
+        display: flex;
+        justify-content: center;
         margin-top: 20px;
+        padding: auto 5em !important;
+
+        .default-btn {
+          width: 25%;
+          margin-right: 3em;
+          @media only screen and (min-width: 320px) and (max-width: 800px) {
+            width: 40%;
+          }
+        }
+
+        .default-btn-one {
+          width: 25%;
+          @media only screen and (min-width: 320px) and (max-width: 800px) {
+            width: 40%;
+          }
+        }
 
         @media only screen and (min-width: 320px) and (max-width: 800px) {
+          margin-top: 20px;
           display: flex;
-          flex-direction: column;
-          margin-left: 1em;
+          justify-content: space-around;
+          padding: 0 0.5em;
         }
-      }
-
-      .default-btn {
-        margin-right: 15px;
       }
     }
   }
@@ -1263,6 +1310,10 @@ body {
   }
 
   .single-footer-widget {
+    @media only screen and (max-width: 767px) {
+      margin-top: 2em;
+    }
+
     .footer-heading {
       margin-bottom: 25px;
 
@@ -1277,6 +1328,7 @@ body {
     }
 
     p {
+      text-align: justify;
       font-size: 15px;
       color: $footer-text-color;
       font-weight: 400;
@@ -1285,7 +1337,8 @@ body {
     }
 
     .footer-social {
-      margin-top: 20px;
+      margin-top: 3em;
+      padding-left: 0 !important;
 
       li {
         display: inline-block;
@@ -1367,6 +1420,10 @@ body {
   }
   .footer-area {
     padding-top: 6em;
+
+    @media only screen and (max-width: 767px) {
+      padding: 2em;
+    }
   }
 }
 
@@ -1548,5 +1605,15 @@ $animation-delay: 0.7s;
 
   100% {
     width: 100%;
+  }
+}
+
+.home-area {
+  .container {
+    .navbar {
+      .navbar-collapse {
+        transition: all 0.7s ease-in-out;
+      }
+    }
   }
 }
