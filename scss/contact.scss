@@ -187,21 +187,18 @@ body {
 
     .navbar-nav {
       margin-left: 45%;
-
+      transition: 5s ease-in-out;
       @media only screen and (min-width: 320px) and (max-width: 800px) {
         margin-left: 0 !important;
-
         li {
           padding: 1em 0.6em;
           border: 1px solid #ccc;
           background-color: $text-color;
-
           a {
             color: #03030c !important;
           }
         }
       }
-
       .nav-item {
         .nav-link {
           font-size: 16px;
@@ -212,15 +209,13 @@ body {
           margin-left: 15px;
           margin-right: 15px;
           text-decoration: none;
-
           &:hover {
             color: $defaultbtn-bgcolor;
           }
         }
-
         &:hover {
           .dropdown-menu {
-            transition: .3s;
+            transition: 0.3s;
             opacity: 1;
             visibility: visible;
             top: 100%;
@@ -228,9 +223,37 @@ body {
             display: block;
           }
         }
-
         .dropdown-menu {
           border: 0 !important;
+          li {
+            width: 200px;
+            @media only screen and (min-width: 320px) and (max-width: 800px) {
+              width: 100%;
+            }
+            a {
+              text-transform: capitalize;
+              padding: 10px 15px;
+              margin: 0;
+              position: relative;
+              color: #0b0b31;
+              font-size: 15.5px;
+              font-weight: 600;
+              white-space: inherit !important;
+            }
+          }
+        }
+      }
+      .dropdown {
+        @media only screen and (min-width: 320px) and (max-width: 800px) {
+          padding: 1em 0.6em;
+          ul {
+            li {
+              padding: 5px 0;
+              a {
+                padding: 1em 15px;
+              }
+            }
+          }
         }
       }
     }
