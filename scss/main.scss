@@ -332,6 +332,11 @@ body {
       padding-bottom: 61px;
       background-position: center;
     }
+
+    .container-fluid {
+      padding-left: 0 !important;
+      z-index: 9999 !important;
+    }
     .nav-item {
       position: relative;
     }
@@ -528,7 +533,7 @@ body {
 
     .single-services-item {
       position: relative;
-      z-index: 1;
+      z-index: 0;
       display: block;
       padding: 35px 1.5em;
       text-align: left;
@@ -614,7 +619,7 @@ body {
 
   .about-area {
     position: relative;
-    z-index: 1;
+    z-index: 0;
 
     .about-content {
       padding-right: 2em;
@@ -1079,7 +1084,7 @@ body {
 
   .hire-section {
     position: relative;
-    z-index: 1;
+    z-index: 0;
     background-image: url(https://cutesolution.com/html/Techvio/assets/img/banner-bg.jpg);
     background-position: center center;
     background-size: cover;
@@ -1164,7 +1169,7 @@ body {
     position: relative;
     background-color: $text-color;
     overflow: hidden;
-    z-index: 1;
+    z-index: 0;
 
     .partner-title {
       text-align: center;
@@ -1231,7 +1236,7 @@ body {
 
 .footer-subscribe-wrapper {
   position: relative;
-  z-index: 1;
+  z-index: 0;
   background-color: $footer-bgcolor;
 
   .subscribe-area {
@@ -1614,7 +1619,6 @@ $animation-delay: 0.7s;
 .home-area {
   .container {
     .navbar {
-
       .navbar-collapse {
         transition: all 0.7s ease-in-out;
       }
@@ -1622,33 +1626,33 @@ $animation-delay: 0.7s;
   }
 }
 .whatsapp_float {
-  position:fixed;
-  width:60px;
-  height:60px;
-  bottom:40px;
-  right:40px;
-  background-color:#25d366;
-  color:#FFF;
-  border-radius:50px;
-  text-align:center;
-        font-size:30px;
-  box-shadow: 2px 2px 3px #999;
-        z-index:100;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0px 0px 15px 4px #999;
+  z-index: 100;
 }
 
 .whatsapp-icon {
-  margin-top:16px;
+  margin-top: 16px;
 }
 /* for mobile */
-@media screen and (max-width: 767px){
-     .whatsapp-icon {
-   margin-top:10px;
-     }
-    .whatsapp_float {
-        width: 40px;
-        height: 40px;
-        bottom: 20px;
-        right: 10px;
-        font-size: 22px;
-    }
+@media screen and (max-width: 767px) {
+  .whatsapp-icon {
+    margin-top: 10px;
+  }
+  .whatsapp_float {
+    width: 40px;
+    height: 40px;
+    bottom: 20px;
+    right: 10px;
+    font-size: 22px;
+  }
 }
