@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="dist/css/flaticon.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="assets/js/main.js"></script>
     <link
@@ -65,10 +69,17 @@
       <div class="home-area">
         <div class="container-fluid">
           <nav class="navbar navbar-expand-lg navbar-dark" id="nav-top">
-            <div class="container">
+            <div class="container" style="height: 60px">
               <a class="navbar-brand fs-4 fw-bolder" href="index.html">
-                Cipher Lab
-                <!-- <img src="images/logo.png" id="black-img" alt="logo" /> -->
+                <!-- <img
+                  src="images/log-2.svg"
+                  id="black-img"
+                  alt="logo"
+                  style="width: 150px; height: 150px"
+                /> -->
+                <span style="font-family: 'Share Tech Mono', monospace"
+                  >arp<span style="color: orange">i</span>cs</span
+                >
               </a>
               <button
                 class="navbar-toggler"
@@ -1064,28 +1075,7 @@
       </a>
     </div>
     <script src="assets/js/bootstrap.min.js"></script>
-    <!-- <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        function counter(id, start, end, duration) {
-          let obj = document.getElementById(id),
-            current = start,
-            range = end - start,
-            increment = end > start ? 1 : -1,
-            step = Math.abs(Math.floor(duration / range)),
-            timer = setInterval(function () {
-              current = current + increment;
-              obj.textContent = current;
-              if (current === end) {
-                clearInterval(timer);
-              }
-            }, step);
-        }
-        counter("count1", 0, 400, 3000);
-        counter("count2", 100, 50, 2500);
-        counter("count3", 0, 40, 3000);
-        counter("count4", 0, 90, 2500);
-      });
-    </script> -->
+
     <script>
       var myVar;
 
